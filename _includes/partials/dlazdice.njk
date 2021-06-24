@@ -1,0 +1,20 @@
+<section class="dlazdice-grid dlazdice-grid--vlevo u-my5">
+
+    {% for zajezd in collections.topnabidka %}
+        {% if loop.index <=3 %}
+            <a href="{{ zajezd.url }}" class="dlazdice">
+                <img class="dlazdice__foto" src="/images/{{ zajezd.data.foto }}" alt="{{ zajezd.data.alt }}">
+                <div class="dlazdice__cena">
+                    {{ zajezd.data.cena }}
+                </div>
+                <div class="dlazdice__text">
+                    <h3 class="dlazdice__nazev">{{ zajezd.data.titulek }}</h3>
+                    {% if loop.index == 1 %}
+                        <p class="dlazdice__popis">{{ zajezd.data.podtitulek}}</p>
+                    {% endif %}
+                </div>
+            </a>
+        {% endif %}
+    {% endfor %}
+
+</section>

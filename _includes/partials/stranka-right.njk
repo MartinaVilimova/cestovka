@@ -1,0 +1,26 @@
+<!-- pravý sloupec -->
+<section class="stranka__sidebar">
+
+    <h2>Last minute zájezdy</h2>
+
+    <div class="dlazdice-grid dlazdice-grid--sloupec">
+        {% for zajezd in collections.topnabidka %}
+        {% if loop.index <=5 %}
+            <a href=" {{ zajezd.url }}" class="dlazdice">
+                <img class="dlazdice__foto" src="/images/{{ zajezd.data.foto }}" alt="{{ zajezd.data.alt }}">
+                <div class="dlazdice__cena">
+                    {{ zajezd.data.cena }}
+                </div>
+                <div class="dlazdice__text">
+                    <h3 class="dlazdice__nazev">{{ zajezd.data.titulek }}</h3>
+                </div>
+            </a>
+        {% endif %}
+    {% endfor %}
+
+    </div>
+
+</section>
+<!-- konec pravého sloupce-->
+
+</div>

@@ -1,0 +1,20 @@
+<article class="zajezd">
+    <!-- levý sloupec s obrázkem a popisem-->
+    <div class="zajezd__text">
+
+        <header class="zajezd__hlavicka">
+            <img class="zajezd__foto" src="/images/{{ foto }}" alt="Palmy">
+
+            <div class="zajezd__titulek">
+                <h1 class="zajezd__nazev">{{ titulek }}</h1>
+                <p class="zajezd__perex">{{ podtitulek }}</p>
+            </div>
+        </header>
+
+        <section class="zajezd__popis u-my5">
+
+            {{ content | safe}}
+
+        </section>
+
+    </div>

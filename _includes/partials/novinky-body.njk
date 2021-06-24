@@ -1,0 +1,15 @@
+<section class="novinky u-my5">
+    <h2>Novinky</h2>
+
+    <div class="novinky__obsah">
+        {% for novinka in collections.novinka %}
+            {% if loop.index <=3 %}
+                <div class="novinka">
+                    <p class="novinka__datum">{{ novinka.data.n_datum }}</p>
+                    <h3 class="novinka__nazev">{{ novinka.data.n_titulek }}</h3>
+                    <p class="novinka__text">{{ novinka.data.n_popis }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

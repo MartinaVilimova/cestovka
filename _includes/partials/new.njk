@@ -1,0 +1,13 @@
+<section class="novinky u-my5">
+    <h2>Novinky</h2>
+
+    <div class="novinky__obsah">
+        {% for new in collections.new %}
+                <div class="novinka">
+                    <p class="novinka__datum">{{ new.data.n_datum }}</p>
+                    <h3 class="novinka__nazev">{{ new.data.n_titulek }}</h3>
+                    <p class="novinka__text">{{ new.data.n_popis }}</p>
+                </div>
+        {% endfor %}
+    </div>
+</section>
